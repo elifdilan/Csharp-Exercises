@@ -5,9 +5,10 @@ Console.WriteLine($"Welcome to Number Guessing Game {name}");
 Random random = new();
 int number = random.Next(1, 10);
 
-int test = 1;
+int test = 0;
 while (true)
-{    
+{   
+    test++;
     try
     {
         Console.WriteLine("Please guess a number from 1-10: ");
@@ -17,7 +18,7 @@ while (true)
             if (number == guess)
             {
                 Console.Clear();
-                Console.WriteLine("CONGRATULATİONS \nYou got your 5th guess right. ");
+                Console.WriteLine($"CONGRATULATİONS \nYou got your {test}th guess right. ");
                 break;
             }
             else
@@ -41,5 +42,4 @@ while (true)
         Console.WriteLine("Please don't enter characters other than number!!");
 
     }
-    test++;
 }
